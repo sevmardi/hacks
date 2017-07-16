@@ -30,6 +30,10 @@ class ExtractUrlFromThread():
 
         return url, end_quote
 
+    def save_into_file(self, data):
+        """Save the urls into a file"""
+        pass
+
     
     
 if __name__ == "__main__":
