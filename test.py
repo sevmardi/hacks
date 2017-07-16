@@ -1,20 +1,11 @@
+import itertools, os
 
-import smtplib
+class TestingThings():
+    def __construct__(self):
+        pass
+    
 
-sender = '23eagle@live.com'
-receivers = ['23eagle@live.com']
-
-message = """From: From Person <from@fromdomain.com>
-To: To Person <to@todomain.com>
-Subject: SMTP e-mail test
-
-This is a test e-mail message.
-"""
-
-try:
-   smtpObj = smtplib.SMTP('localhost')
-   smtpObj.sendmail(sender, receivers, message)         
-   print ("Successfully sent email")
-except Exception as e:
-   print ("Error: unable to send email", e)
-
+    
+    
+if __name__ == '__main__':
+    main = TestingThings()
