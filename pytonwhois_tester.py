@@ -2,13 +2,13 @@ import pythonwhois
 import json
 
 #https://stackoverflow.com/questions/29773003/check-whether-domain-is-registered
-domains = ['woningnethollandrijnland.nl']
+domains = ['betbattles.io']
 
 for dom in domains:
     details = pythonwhois.get_whois(dom)
-    if not details:
+    if details['contacts']['registrant'] == None:
         print('not registered')
-    #response = json.loads(details)    
-    #parsed = json.dumps(response)
-    print(details)
+    else:
+        
+    	print(details['expiration_date'])
     

@@ -2,6 +2,7 @@ import requests
 import urllib2
 import re
 import pymysql
+from scrapy.spider import  BaseSpider
 
 
 # https://stackoverflow.com/questions/15517483/how-to-extract-urls-from-an-html-page-in-python
