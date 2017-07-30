@@ -6,6 +6,8 @@ class TestingThings():
     def save_to_file(self):
         file = open('bcon.txt', 'w')
         file.write('hello world')
+        file.close()
+        
     def test(self, cls):
     	print('work with %s' % cls)
     	it = classmethod(it)

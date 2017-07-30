@@ -1,6 +1,7 @@
-import requests
+import urllib.request
 import time
 from bs4 import BeautifulSoup
+import urllib.parse
 
 URL = "https://news.ycombinator.com/item?id=14437921"
 
@@ -17,8 +18,9 @@ class ExtractUrlFromThread():
         pass
 
     def main(self):
-        urlInput = str(input('URL to extract:   '))
-
+        url = str(input('URL to extract:   '))
+        conn = urllib2.urlopen(url)
+        html = conn.read()
         # self.extract(urlInput)
 
     def extract(self, page):
@@ -47,12 +49,6 @@ class ExtractUrlFromThread():
 
         except Exception as e:
             print(e)
-
-
-    #TODO
-    def save_into_db(self):
-        """Save urls into mysql db"""
-        pass
 
 
 if __name__ == "__main__":
