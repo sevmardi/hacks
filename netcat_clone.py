@@ -14,7 +14,6 @@ upload_des = ""
 port = 0
 
 
-
 def usage():
     print("BHP not cool")
     print()
@@ -69,6 +68,6 @@ def main():
 			assert False,"Unhandled Option"
 
 	#are we going to listen or just send data from stdin? 
-	
+
 if __name__ == "__main__":
 	usage()
