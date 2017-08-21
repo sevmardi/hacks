@@ -8,20 +8,13 @@ class TestingThings():
         file.write('hello world')
         file.close()
         
-    def test(self, cls):
-    	print('work with %s' % cls)
-    	it = classmethod(it)
-    	def uncommon():
-    		print('I could be a global function')
-    	uncommon = statismethod(uncommon)
-
-    def decorator(self, cls):
-    	
-        print('work with %s', % cls)
-    
-    @staicmethod
-    def uncommon(self):
-    	print('I could be a global function')
+    def mydec(function):
+        def _mydec(* args, **kw):
+            #do soome stuff 
+            #function gets called. 
+            res = function(*args, **kw)
+            return res;
+        return _mydec
 
     
 if __name__ == '__main__':

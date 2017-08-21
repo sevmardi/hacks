@@ -6,7 +6,7 @@ capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix','A
 class RandomQuizFiles():
 
 	def __construct__(self):
-		pass
+		self.create_different_quizzes()
 
 	def create_different_quizzes(self):
 		for quizNum in range(35):
@@ -29,12 +29,7 @@ class RandomQuizFiles():
 			answerOptions = wrongAnswers + [correctAnswer]
 			random.shuffle(answerOptions)
 
-			
-			
-
-	def create_multiple_choice_question(self):
-		pass
-
-	def write_to_file(self, data):
-		pass
+if __name__ == '__main__':
+    RandomQuizFiles()
+		
 
