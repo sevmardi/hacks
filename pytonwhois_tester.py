@@ -2,7 +2,7 @@ import pythonwhois as whois
 import json
 
 #https://stackoverflow.com/questions/29773003/check-whether-domain-is-registered
-domains = ['ipinfo.io','betwizer.io','park.io']
+domains = ['ipinfo.io','config.io','park.io']
 
 available = []
 unavailable = []

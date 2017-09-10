@@ -1,23 +1,17 @@
-import itertools, os
+import time
 
-class TestingThings():
-    def __construct__(self):
-        pass
-    def save_to_file(self):
-        file = open('bcon.txt', 'w')
-        file.write('hello world')
-        file.close()
-        
-    def mydec(function):
-        def _mydec(* args, **kw):
-            #do soome stuff 
-            #function gets called. 
-            res = function(*args, **kw)
-            return res;
-        return _mydec
+def main(n):
+    start = time.time()
 
+    the_sum  = 0
+    for i in range(1, n+1):
+        the_sum+=i
+    end = time.time()
+    return the_sum,end-start
+
+def sum_of_n(n):
+    return (n * (n +1) ) / 2       
     
 if __name__ == '__main__':
-    main = TestingThings()
-    main.save_to_file()
-    
+   
+    print(sum_of_n(50))   
