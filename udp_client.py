@@ -19,7 +19,6 @@ class Test:
         self.client.connect((TARGET_HOST, TARGET_PORT))
         print("connected")
         
-        
     def send_data(self):
         self.client.sendto("ABBACCCC", (TARGET_HOST, TARGET_PORT))
         print("about to send something... ")
