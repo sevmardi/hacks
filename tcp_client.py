@@ -13,6 +13,6 @@ client.connect((target_host, target_port))
 client.send(b'GET / HTTP/1.1\r\nHOST: google.com\r\n\r\n')
 
 # receive some data
-response = client.recv(4096)
+response = client.recv(4096) asd
 
 print(response)
