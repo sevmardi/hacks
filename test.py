@@ -1,17 +1,12 @@
 import time
+import random
+import networkx as nx
+from sklearn import linear_model
+import random
+import matplotlib.pyplot as plt
 
-def main(n):
-    start = time.time()
 
-    the_sum  = 0
-    for i in range(1, n+1):
-        the_sum+=i
-    end = time.time()
-    return the_sum,end-start
-
-def sum_of_n(n):
-    return (n * (n +1) ) / 2       
-    
-if __name__ == '__main__':
-   
-    print(sum_of_n(50))   
+# Compute shortest path between source and all other nodes reachable from source.
+G = nx.path_graph(5)
+path=nx.single_source_shortest_path_length(G,0)
+print(path[4])
