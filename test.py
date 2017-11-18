@@ -1,8 +1,5 @@
-import PyPDF2
-pdf = open("ml/datasets/mmds_book.pdf", 'rb')
+from numpy import * 
 
-
-reader = PyPDF2.PdfFileReader(pdf)
-
-
-print(reader.numPages)
+# import random 
+randMat =  mat(random.rand(4,4))
+print(randMat.I) 
