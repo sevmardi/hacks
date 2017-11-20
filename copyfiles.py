@@ -10,7 +10,6 @@ class CopyFiles():
 
     def copy_single_file(self, file):
         """
-
         :param file:
         :return:
         """

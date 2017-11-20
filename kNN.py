@@ -91,10 +91,40 @@ def dating_class_tesst():
 
 def classify_person():
     """    
-    Dating site predictor function
+    Dating site predictor function based on ML in Action book
     """
     res_list = ['not at all', 'in small doses', 'in large doses']
-    
-    group, labels = createDataSet()
-    a = classify0([0, 0], group, labels, 3)
-    print(a)
+    percent_tats = float(input(\
+        "Percentage of time spent playing video games?"))
+    ff_miles = float(input("Frequent flier miles earned per year?"))
+    ice_cream = float(input("liters of ice cream consumer per year?"))
+    dating_data_mat, dating_labels = file2matrix('file.txt')
+    norm_mat, ranges, min_vals = autoNorm(dating_data_mat)
+    in_arr = array([ff_miles, percent_tats, ice_cream])
+    classifier_res = classify0((in_arr-\
+        min_vals)/ ranges.norm_mat, dating_labels, 3)
+    print("You will probably like this person: ", \
+        res_list[classifier_res - 1])
+
+def img2vector(filename):
+    return_vect = zeros((1, 1024))
+    for i in range(32):
+        line_str = fr.readline()
+        for j in range(32):
+            return_vect[0,32*i+j] = int(lineStr[j])
+    return return_vect
+
+def hand_writing_class_test():
+    """    
+    Handwritten digits testing code
+    """
+    hw_lables = []
+    training_file_list = listdir('trainingDigits')
+    m = len(training_file_list)
+    training_mat = zeros((m, 1024))
+    for i in range(m):
+        file_name_str = training_file_list[i]
+        file_str = file_name_str.split('.')[0]
+
+
+
