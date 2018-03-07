@@ -1,3 +1,6 @@
 .idea
-FluentPython.py
-expert_in_pyton.py
+test.py
+*.xml
+*.bin
+*.iml
+*.out
