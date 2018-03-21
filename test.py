@@ -1,9 +1,21 @@
-import csv 
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+import random
+from collections import Counter, defaultdict
+import math, datetime
 
-with open('file_name', 'rb') as f:
-	reader = csv.reader(f, delimite='\t')
-	for row in reader:
-		data = row[0]
-		symbol = row[1]
-		closing_price = float(row[2])
-		process(data, sumbol, closing_price)
+
+
+
+
+def log(message, when=None):
+	when = datetime.datetime.now() if when is None else when
+	print("%s: %s" % (when, message))
+
+
+log('hie there')
+
+
+
+
+
