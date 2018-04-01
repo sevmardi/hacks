@@ -4,16 +4,13 @@ object Demo {
 	def main(args : Array[String]){
 
 
-		var list1 = range(1,10)
-		var list2 = range(10,20)
 
-		
-		val seq = List.tabulate(6)(n => n * n)
+		var myvar = 10
+		val myVal =  "Hell World"
 
-		println("seq:" + seq)
+		print(myvar) 
+		print(myVal)
 
-		val mul = List.tabulate(4,5)(_ * _)
-		println("mul: " + mul)
 
 		
 

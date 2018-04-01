@@ -2,18 +2,15 @@ import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 import random
 from collections import Counter, defaultdict
-import math, datetime
+import math
+import datetime
 
+from types import MappingProxyType 
 
+d = {1:'A'}
+d_proxy = MappingProxyType(d)
 
-
-
-def log(message, when=None):
-	when = datetime.datetime.now() if when is None else when
-	print("%s: %s" % (when, message))
-
-
-log('hie there')
+print(d_proxy)
 
 
 
