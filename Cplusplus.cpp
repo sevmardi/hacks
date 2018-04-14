@@ -1,22 +1,21 @@
-#include <iostream>
-#include <string>
+#include <stdio.h>	
 
-using namespace std;
+void func(void);
 
-#define SYMBOL  "$"
-#define PRICE 100;
-#define MONEY "Dollars"
+static int count  =5;
 
-int main(){
+int main(int argc, char const *argv[])
+{
+	while(count--){
+		func();
 
-	int arr[5] = {20,-6,0,100,78};
-	int max = arr[0];
-
-	for(int n = 1; n < 5; n++) 
-		if(arr[n] > max)
-			max = arr[n];
-	cout << "Max value = " << max << endl;
-
+	}
 	return 0;
 
+}
+
+void func(void){
+	static int i = 5;
+	i++;
+	printf("i is %d and count is %d\n", i, count );
 }
