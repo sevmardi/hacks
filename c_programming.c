@@ -2,8 +2,25 @@
 
 int main(int argc, char const *argv[])
 {
-  register int x;
-  register char c;
-  
-  return 0;
+
+	int i, j;
+	for( i =2; i <100;i++){
+		for( j=2; j< (i/j); j++)
+			if (!(i%j)) break;
+		
+		if(j > (i/j)) printf("%d is prime\n", i);
+
+	}
+
+
+
+
+
+
+
+
+
+
+	return 0 ;
+
 }

@@ -15,15 +15,44 @@ class Point(val xc: Int, val yc: Int) {
 object Demo {
   def main(args: Array[String]) {
 
-    val arr = Array(1, 2, 3)
+    // val arr = Array(1, 2, 3,5,6,7,8)
+    // val lst = List(7.2, 89)
+    // val c = Vector.tabulate(10)(i => i*i)
 
-    val lst = List(7.2,89)
+    // // arr.foreach(println)
 
-    arr(0)
+    // b.find(_ == 8)
 
-    
+    delayed(time())
   }
 
+  def addInt(a: Int, b: Int): Int = {
 
+    var sum: Int = 0
 
+    sum = a + b
+
+    return sum
+  }
+
+  def time() = {
+    println("Getting time in nano seconds")
+
+    System.nanoTime
+
+  }
+  def delayed(t: => Long) = {
+    println("In delayed method")
+    println("Param" + t)
+  }
+
+  def printStrings(args: String*) = {
+    var i: Int = 0
+    for (arg <- args) {
+      println("Arg value[" + i + "] = " + arg)
+
+      i += 1
+
+    }
+  }
 }
