@@ -1,9 +1,17 @@
-package main 
+package main
 
-import 
-"fmt"
+import (
+	"fmt"
+	_ "github.com/goinaction/code/chapter2/sample/matchers"
+	"github.com/goinaction/code/chapter2/sample/search"
+	"os"
+)
+
+func init() {
+	log.SetOutput(os.Stdout)
+}
 
 func main() {
-	fmt.Println("hello, world")
-	
+	search.Run("president")
+
 }

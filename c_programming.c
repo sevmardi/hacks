@@ -1,26 +1,20 @@
 #include <stdio.h>
-
+#include <string.h>
 int main(int argc, char const *argv[])
 {
 
-	int i, j;
-	for( i =2; i <100;i++){
-		for( j=2; j< (i/j); j++)
-			if (!(i%j)) break;
-		
-		if(j > (i/j)) printf("%d is prime\n", i);
+// char greetings[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+char str1[12] = "Hello";
+char str2[12] = "World";
 
-	}
+char str3[12];
 
+strcpy(str3, str1);
 
+strcat( str1, str2);
+printf("strcat( str1, str2): %s\n", str1 );
 
-
-
-
-
-
-
-
-	return 0 ;
+	
+	
 
 }
