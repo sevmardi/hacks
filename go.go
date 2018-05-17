@@ -2,16 +2,17 @@ package main
 
 import (
 	"fmt"
-	_ "github.com/goinaction/code/chapter2/sample/matchers"
-	"github.com/goinaction/code/chapter2/sample/search"
 	"os"
+	"sync"
 )
 
-func init() {
-	log.SetOutput(os.Stdout)
-}
-
 func main() {
-	search.Run("president")
+	//
+
+	// var colors map[string]string
+
+	colors := make(map[string]string)
+
+	fmt.Println(colors)
 
 }

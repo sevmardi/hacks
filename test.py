@@ -5,24 +5,32 @@
 # import math
 # import datetime
 # import subprocess
-
+from collections.abc import Sequence 
 # import tensorflow as tf
 # print(tf.get_default_graph())
 
 # g = tf.Graph()
 # print(g)
 
-class MyObject(object):
-	"""docstring for MyObject"""
-	def __init__(self, arg):
-		super(MyObject, self).__init__()
-		self.arg = arg
-		self.__private_filed= 0
-		self.public_filed = 1
 
-	def get_private_field(self):
-		return self.__private_filed
+class OldRegsiter(object):
+	def __init__(self, ohms):
 		
+		self._ohms = ohms
+	
+	def get_ohms(self):
+		return self._ohms
 
+	def set_ohms(self, ohms):
+		self._ohms = ohms
 
+	@property
+	def voltage(self):
+		return self._voltage
+	
+	@voltage.setter
+	def voltage(self, voltage):
+		self._voltage = voltage
+		self.current = self._voltage / self.ohms
 
+	

@@ -15,16 +15,11 @@ class Point(val xc: Int, val yc: Int) {
 }
 
 object Demo {
+  var factor = 4;
+  val multiplier = (i: Int) => i * factor
   def main(args: Array[String]) {
-
-  val multiplier = (i:Int) => i * 10
-
+    val greetings: String = "Hello, World"
+    println(greetings)
   }
-
-
-
-  
-
-
 
 }
