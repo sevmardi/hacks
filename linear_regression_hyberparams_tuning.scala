@@ -20,17 +20,17 @@ val lr = new LinearRegression().setMaxIter(10)
 
 // parameter grid 
 val paramGrid = new ParamGridBuilder()
-.addGrid(lr.regParam, Array(0.1,0.01))
-.addGrid(lr.fitIntercept)
-.addGrid(lr.elasticNetParam, Array(0.0, 0.5, 1.0))
-.build()
+  .addGrid(lr.regParam, Array(0.1, 0.01))
+  .addGrid(lr.fitIntercept)
+  .addGrid(lr.elasticNetParam, Array(0.0, 0.5, 1.0))
+  .build()
 
 // Create a training validation split:
 val trainValidationSplit = new TrainValidationSplit()
-.setEstimator(lr)
-.setEvaluator(new RegressionEvaluator)
-.setEstimatorParamMaps(paramGrid)
-.setTrainRatio(0.8)
+  .setEstimator(lr)
+  .setEvaluator(new RegressionEvaluator)
+  .setEstimatorParamMaps(paramGrid)
+  .setTrainRatio(0.8)
 
 // train the model 
 val model = trainValidationSplit.fit(training)
@@ -38,9 +38,7 @@ val model = trainValidationSplit.fit(training)
 // Do the predictions on the test dataset:
 val predications = model.transform(test)
 
-
 // Evaluate the predictions 
 val evaluator = new RegressionEvaluator()
 evaluator.evaluate(predictions)
-
 

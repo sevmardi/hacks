@@ -5,32 +5,15 @@
 # import math
 # import datetime
 # import subprocess
+# import smtplib
+# import pythonwhois
 from collections.abc import Sequence 
 # import tensorflow as tf
 # print(tf.get_default_graph())
 
-# g = tf.Graph()
-# print(g)
+import os
+# https://godjango.com/blog/working-with-environment-variables-in-python/
+
+print (os.environ['DEBUG'])
 
 
-class OldRegsiter(object):
-	def __init__(self, ohms):
-		
-		self._ohms = ohms
-	
-	def get_ohms(self):
-		return self._ohms
-
-	def set_ohms(self, ohms):
-		self._ohms = ohms
-
-	@property
-	def voltage(self):
-		return self._voltage
-	
-	@voltage.setter
-	def voltage(self, voltage):
-		self._voltage = voltage
-		self.current = self._voltage / self.ohms
-
-	
